@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:orientation="horizontal"
+        android:importantForAutofill="no"
+        android:includeFontPadding="false"
+        android:text="PT. Cinta Sejati"
+        android:fontFamily="sans-serif"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="@dimen/_130sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:src="@drawable/logo"
+        android:layout_below="@id/judul"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textNamaPembeli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Pegawai :"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal"
+        android:textSize="@dimen/_14ssp"
+        android:layout_below="@id/logo"/>
+
+    <EditText
+        android:id="@+id/inputNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="sans-serif"
+        android:hint="contoh: Rivaldi Rasyid"
+        android:importantForAutofill="no"
+        android:includeFontPadding="false"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        android:layout_toRightOf="@id/textNamaPembeli"
+        android:layout_below="@id/logo"/>
+
+    <TextView
+        android:id="@+id/textPilihanMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jabatan :   "
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal"
+        android:textSize="@dimen/_14ssp"
+        android:layout_below="@id/textNamaPembeli"/>
+
+    <RadioGroup
+        android:id="@+id/grupRadio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textSize="@dimen/_14ssp"
+        android:layout_below="@id/inputNama"
+        android:layout_toRightOf="@id/textPilihanMenu">
+
+        <RadioButton
+            android:id="@+id/buttonOperator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Operator"/>
+
+        <RadioButton
+            android:id="@+id/buttonPengawas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pengawas"/>
+
+        <RadioButton
+            android:id="@+id/buttonManager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manager"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textGajiPokok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gaji Pokok :               "
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal"
+        android:textSize="@dimen/_14ssp"
+        android:layout_below="@id/grupRadio"/>
+
+    <EditText
+        android:id="@+id/inputGajiPokok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="sans-serif"
+        android:importantForAutofill="no"
+        android:includeFontPadding="false"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        android:layout_below="@id/grupRadio"
+        android:editable="false"
+        android:layout_toRightOf="@id/textGajiPokok"/>
+
+    <TextView
+        android:id="@+id/textJumlahAnak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jumlah Anak :           "
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal"
+        android:textSize="@dimen/_14ssp"
+        android:layout_below="@id/inputGajiPokok"/>
+
+    <EditText
+        android:id="@+id/inputJumlahAnak"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="sans-serif"
+        android:importantForAutofill="no"
+        android:includeFontPadding="false"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        android:layout_below="@id/inputGajiPokok"
+        android:layout_toRightOf="@id/textJumlahAnak"/>
+
+    <TextView
+        android:id="@+id/textTunjangan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tunjangan :               "
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal"
+        android:textSize="@dimen/_14ssp"
+        android:layout_below="@id/inputJumlahAnak"/>
+
+    <EditText
+        android:id="@+id/inputTunjangan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="sans-serif"
+        android:importantForAutofill="no"
+        android:includeFontPadding="false"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        android:editable="false"
+        android:layout_below="@id/inputJumlahAnak"
+        android:layout_toRightOf="@id/textTunjangan"/>
+
+    <Button
+        android:id="@+id/btnHitung"
+        android:backgroundTint="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:text="Hitung"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        android:layout_below="@id/inputTunjangan"/>
+
+    <TextView
+        android:id="@+id/keterangan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_below="@id/btnHitung"
+        android:fontFamily="sans-serif"
+        android:textSize="@dimen/_14ssp"
+        android:importantForAutofill="no"
+        android:includeFontPadding="false"/>
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
